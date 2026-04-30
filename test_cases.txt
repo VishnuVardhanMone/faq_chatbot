@@ -1,0 +1,66 @@
+FAQ Chatbot – Test Cases
+
+1. Basic question
+Try asking: do you offer refunds  
+Expected: Bot should say that refunds are available for eligible products
+
+2. Follow-up questions (same topic)
+Try:
+refund → when  
+Expected: Bot should tell refund time (5–7 days)
+
+refund → how  
+Expected: Bot should explain the refund process
+
+3. Multiple follow-ups
+Try:
+refund → when → how  
+Expected:
+- "when" gives refund timing  
+- "how" explains process  
+
+4. Switching topics
+Try:
+refund → delivery  
+Expected: Bot should switch and answer about delivery
+
+delivery → cancel  
+Expected: Bot should now answer about cancelling orders
+
+5. Follow-up after switching
+Try:
+delivery → when  
+Expected: Delivery time (3–5 days)
+
+cancel → how  
+Expected: Steps to cancel order
+
+6. Short queries
+Try:
+when  
+how  
+status  
+
+Expected:
+Answer should depend on previous question (context-aware)
+
+7. Slightly unclear queries
+Try:
+order  
+Expected: Bot may suggest something like a related question
+
+8. Unrelated question
+Try:
+what is AI  
+Expected: Bot should say it doesn't understand
+
+9. Typo case (optional)
+Try:
+refnd  
+Expected: Either a suggestion or fallback response
+
+10. Empty input
+Just press enter  
+Expected: Bot should ask for a valid question
+
+End of test cases
