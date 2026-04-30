@@ -1,0 +1,72 @@
+You: do you offer refunds
+
+Query: do you offer refunds
+Intent: refund_status
+Score: 0.98
+Bot: Yes, we offer refunds on eligible products.
+
+You: when
+
+Query: when
+Intent: refund_status
+Score: 1.1
+Bot: You will receive your refund within 5-7 business days.
+
+You: how
+
+Query: how
+Intent: refund_status
+Score: 1.1
+Bot: Refunds are processed after approval through your original payment method.
+
+You: when how 
+
+Query: when how
+Intent: refund_status
+Score: 0.97
+Bot: You will receive your refund within 5-7 business days.
+
+You: delivery
+
+Query: delivery
+Intent: delivery
+Score: 0.79
+Bot: You can view delivery status in your orders page.
+
+You: when
+
+Query: when
+Intent: delivery
+Score: 1.1
+Bot: Your order will arrive within 3-5 business days.
+
+You: how
+
+Query: how
+Intent: delivery
+Score: 1.1
+Bot: Delivery is handled by our logistics partners.
+
+You: order
+
+Query: order
+Intent: delivery
+Score: 0.8
+Bot: You can track your order from the tracking section.
+
+You: what is ai
+
+Query: what is ai
+Intent: delivery
+Score: 0.3
+Bot: I'm not sure I understand. Ask about refunds, delivery, or orders.
+
+You: refn
+
+Query: refn
+Intent: refund_status
+Score: 0.5
+Bot: Did you mean: What is the refund process??
+
+You:  
+Bot: Please enter a valid question.
