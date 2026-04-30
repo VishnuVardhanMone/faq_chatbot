@@ -1,0 +1,229 @@
+[
+  {
+    "intent": "refund_status",
+    "qa_pairs": [
+      {
+        "q": "Do you offer refunds?",
+        "a": "Yes, we offer refunds on eligible products."
+      },
+      {
+        "q": "How do I get a refund?",
+        "a": "You can request a refund from your orders page."
+      },
+      {
+        "q": "What is the refund process?",
+        "a": "Refund process starts after approval."
+      },
+      {
+        "q": "When will I get my refund?",
+        "a": "You will receive your refund within 5-7 business days."
+      },
+      {
+        "q": "How long does refund take?",
+        "a": "Refunds usually take 5-7 business days."
+      },
+      {
+        "q": "Why is my refund delayed?",
+        "a": "Refund delays may happen due to bank processing or verification."
+      },
+      {
+        "q": "when",
+        "a": "You will receive your refund within 5-7 business days."
+      },
+      {
+        "q": "how",
+        "a": "Refunds are processed after approval through your original payment method."
+      },
+      {
+        "q": "how long",
+        "a": "Refunds take around 5-7 business days."
+      },
+      {
+        "q": "why",
+        "a": "Refunds may be delayed because of verification or banking delays."
+      },
+      {
+        "q": "status",
+        "a": "You can check refund status in your orders section."
+      }
+    ]
+  },
+
+  {
+    "intent": "delivery",
+    "qa_pairs": [
+      {
+        "q": "How long does delivery take?",
+        "a": "Delivery usually takes 3-5 business days."
+      },
+      {
+        "q": "When will my order arrive?",
+        "a": "Your order will arrive within 3-5 business days."
+      },
+      {
+        "q": "Where is my order?",
+        "a": "You can track your order from the tracking section."
+      },
+      {
+        "q": "How can I track my order?",
+        "a": "Tracking details are available in your account."
+      },
+      {
+        "q": "Delivery status",
+        "a": "You can view delivery status in your orders page."
+      },
+      {
+        "q": "when",
+        "a": "Your order will arrive within 3-5 business days."
+      },
+      {
+        "q": "how",
+        "a": "Delivery is handled by our logistics partners."
+      },
+      {
+        "q": "how long",
+        "a": "Delivery takes around 3-5 days."
+      },
+      {
+        "q": "where",
+        "a": "You can track the location of your order in tracking."
+      },
+      {
+        "q": "tracking",
+        "a": "Tracking details are available in your account."
+      }
+    ]
+  },
+
+  {
+    "intent": "cancel_order",
+    "qa_pairs": [
+      {
+        "q": "How can I cancel my order?",
+        "a": "You can cancel your order from the orders page."
+      },
+      {
+        "q": "Can I cancel my order?",
+        "a": "Yes, you can cancel your order before it is shipped."
+      },
+      {
+        "q": "When can I cancel my order?",
+        "a": "Orders can be canceled within 24 hours."
+      },
+      {
+        "q": "Why can't I cancel my order?",
+        "a": "Orders cannot be canceled after they are processed."
+      },
+      {
+        "q": "Cancel process",
+        "a": "Go to your orders page and click cancel."
+      },
+      {
+        "q": "when",
+        "a": "Orders can be canceled within 24 hours."
+      },
+      {
+        "q": "how",
+        "a": "Go to your orders page and click cancel."
+      },
+      {
+        "q": "why",
+        "a": "After processing begins, cancellation is not possible."
+      }
+    ]
+  },
+
+  {
+    "intent": "payment_issue",
+    "qa_pairs": [
+      {
+        "q": "My payment failed",
+        "a": "Please check your payment details and try again."
+      },
+      {
+        "q": "Why is my payment declined?",
+        "a": "Payment may be declined due to insufficient balance or bank restrictions."
+      },
+      {
+        "q": "Transaction failed",
+        "a": "Your transaction could not be completed. Please retry later."
+      },
+      {
+        "q": "Payment issue",
+        "a": "Please try another payment method or contact your bank."
+      },
+      {
+        "q": "when",
+        "a": "You can retry payment immediately after failure."
+      },
+      {
+        "q": "how",
+        "a": "Try another payment method or verify your card details."
+      },
+      {
+        "q": "why",
+        "a": "Payments can fail because of bank issues or incorrect details."
+      }
+    ]
+  },
+
+  {
+    "intent": "account_issue",
+    "qa_pairs": [
+      {
+        "q": "I forgot my password",
+        "a": "Use the Forgot Password option to reset your password."
+      },
+      {
+        "q": "How do I reset my password?",
+        "a": "Click on Forgot Password and follow the instructions."
+      },
+      {
+        "q": "Cannot login",
+        "a": "Please verify your email and password."
+      },
+      {
+        "q": "Login issue",
+        "a": "Try resetting your password or clearing browser cache."
+      },
+      {
+        "q": "when",
+        "a": "Password reset links are sent immediately."
+      },
+      {
+        "q": "how",
+        "a": "Use the Forgot Password option on the login page."
+      },
+      {
+        "q": "why",
+        "a": "Login issues may occur due to wrong credentials or account lock."
+      }
+    ]
+  },
+
+  {
+    "intent": "working_hours",
+    "qa_pairs": [
+      {
+        "q": "What are your working hours?",
+        "a": "We are open from 9 AM to 6 PM, Monday to Saturday."
+      },
+      {
+        "q": "When are you open?",
+        "a": "Our business hours are 9 AM to 6 PM."
+      },
+      {
+        "q": "Business timings",
+        "a": "We operate from 9 AM to 6 PM."
+      },
+      {
+        "q": "when",
+        "a": "We are open from 9 AM to 6 PM."
+      },
+      {
+        "q": "how long",
+        "a": "We operate for 9 hours daily."
+      }
+    ]
+  }
+]
