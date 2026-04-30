@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project is a context-aware FAQ chatbot that retrieves answers using semantic similarity. It can handle both direct questions and follow-up queries by maintaining conversational context.
+This project implements a context-aware FAQ chatbot that retrieves answers using semantic similarity. It supports both direct questions and follow-up queries by maintaining conversational context and dynamically switching between intents.
+
+---
 
 ## Features
 
@@ -12,11 +14,15 @@ This project is a context-aware FAQ chatbot that retrieves answers using semanti
 * Dynamic intent switching
 * Fully dataset-driven responses
 
+---
+
 ## Tech Stack
 
 * Python
 * SentenceTransformers
 * NumPy
+
+---
 
 ## How It Works (Detailed)
 
@@ -29,7 +35,7 @@ The FAQ dataset is structured as a JSON file where each entry contains:
 * An intent (topic)
 * Multiple question-answer pairs
 
-The data is flattened into three lists:
+The data is flattened into:
 
 * `questions`: all possible user queries
 * `answers`: corresponding responses
@@ -41,7 +47,7 @@ The data is flattened into three lists:
 
 Each question is converted into a numerical vector using a pre-trained SentenceTransformer model.
 
-These vectors capture the semantic meaning of the text, allowing the system to understand rephrased or similar queries.
+These embeddings capture semantic meaning, allowing the system to understand rephrased or similar queries.
 
 ---
 
@@ -49,24 +55,22 @@ These vectors capture the semantic meaning of the text, allowing the system to u
 
 When a user enters a query:
 
-* The query is normalized (lowercased and trimmed)
-* It is converted into an embedding vector using the same model
+* The input is normalized (lowercased and trimmed)
+* It is converted into an embedding vector
 
 ---
 
 ### 4. Similarity Search
 
-The system performs two types of similarity search:
+#### Global Search
 
-**Global Search**
+* Compares the query with all stored questions
+* Finds the most similar match across all intents
 
-* Compares the query vector with all stored question vectors
-* Identifies the most similar question across all intents
-
-**Context-Based Search**
+#### Context-Based Search
 
 * If a previous intent exists, the search is limited to that intent
-* This helps handle follow-up queries like "when", "how", or "status"
+* Helps handle follow-up queries like "when", "how", or "status"
 
 ---
 
@@ -74,15 +78,15 @@ The system performs two types of similarity search:
 
 The system compares:
 
-* The best match from global search
-* The best match from context-based search
+* Best match from global search
+* Best match from context-based search
 
 Decision logic:
 
-* If the query is short (e.g., "when", "how"), prioritize context
+* For short queries (e.g., "when", "how"), prioritize context
 * Otherwise, select the result with the higher similarity score
 
-This enables both:
+This enables:
 
 * Accurate follow-up handling
 * Dynamic switching between topics
@@ -101,9 +105,9 @@ This improves accuracy for conversational inputs.
 
 Based on the final similarity score:
 
-* High confidence → return the corresponding answer
-* Medium confidence → suggest the closest matching question
-* Low confidence → return a fallback message
+* High confidence → return the answer
+* Medium confidence → suggest closest matching question
+* Low confidence → return fallback response
 
 ---
 
@@ -111,23 +115,19 @@ Based on the final similarity score:
 
 The chatbot maintains the last detected intent:
 
-* If confidence is high → update context
-* If confidence is low → reset context
+* High confidence → update context
+* Low confidence → reset context
 
-This allows the system to:
+This allows:
 
-* Handle multi-turn conversations
-* Avoid incorrect intent carryover
+* Multi-turn conversations
+* Avoiding incorrect intent carryover
 
 ---
 
-### Summary
+## Example Interaction
 
-The chatbot combines semantic search, intent grouping, and context tracking to provide accurate and conversational responses without relying on hardcoded rules.
-
-
-## Example
-
+```
 User: refund
 Bot: Yes, we offer refunds
 
@@ -139,6 +139,9 @@ Bot: Delivery takes 3-5 days
 
 User: when
 Bot: Your order will arrive in 3-5 days
+```
+
+---
 
 ## How to Run
 
@@ -147,8 +150,10 @@ pip install -r requirements.txt
 python app.py
 ```
 
+---
+
 ## Future Improvements
 
 * Add Flask API
-* Build UI
-* Improve dataset
+* Build user interface
+* Improve dataset coverage
